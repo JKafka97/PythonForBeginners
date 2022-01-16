@@ -1,0 +1,1 @@
+#vypočti z minutové mzdy tu za měsíc
