@@ -1,1 +1,0 @@
-#štěstí == bohatství ?
