@@ -1,0 +1,1 @@
+#Typni si číslo od 1 do 5! (while + random)
