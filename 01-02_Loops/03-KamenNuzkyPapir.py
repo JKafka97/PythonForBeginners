@@ -5,7 +5,8 @@ from random import choice
 seznam_moznosti = ['kámen', 'nůžky', 'papír']
 def main():
     tip = tip_stroje()
-    print(tip)
+    while True:
+        otazka_uzivateli()                        #všechny def napsat sem
 
 def otazka_uzivateli():
     return input('Naval odpoveď. ')
