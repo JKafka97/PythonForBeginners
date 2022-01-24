@@ -7,7 +7,7 @@ def tipni_cislo():
     return randint(1, 5)
     
 def hra():
-    tip = tipni_cislo()
+    tip = tipni_cislo()     
     while True:
         jeho_tip = int(input('Jaký je tip na číslo? '))
         if jeho_tip == tip:
@@ -16,5 +16,5 @@ def hra():
         else:
             print('Smůla hlupáku.')
 
-hra()  
+hra()       #vyvolat hru!
     
