@@ -6,18 +6,18 @@ seznam_moznosti = ['kámen', 'nůžky', 'papír']
 
 def main():
     tip = tip_stroje()
+    tip_uzivatele = odpoved_uzivatele()
     while True:    
-        otazka_uzivateli()
-        tip_stroje()
-        porovnani(odpoved_uzivatele, tip_stroje)                      #všechny def napsat sem
+        porovnani(tip_uzivatele, tip)            
+        break          
 
-def otazka_uzivateli():
+def odpoved_uzivatele():
     return input('Naval odpoveď. ') 
-
+    
 def porovnani(odpoved_uzivatele, tip_stroje):
-    odpoved_uzivatele = otazka_uzivateli()
+    print(tip_stroje)
     if odpoved_uzivatele == tip_stroje:
-        print('Plichta, ještě jednou.')
+        print('Plichta, pojď ještě jednou frajere.')
     elif ((odpoved_uzivatele == 'kámen' and tip_stroje == 'papír') or 
           (odpoved_uzivatele == 'papír' and tip_stroje == 'nůžky') or 
           (odpoved_uzivatele == 'nůžky' and tip_stroje == 'kámen')):
@@ -25,9 +25,7 @@ def porovnani(odpoved_uzivatele, tip_stroje):
     elif odpoved_uzivatele == 'kámen' and tip_stroje == 'nůžky'or odpoved_uzivatele == 'papír' and tip_stroje == 'kámen' or odpoved_uzivatele == 'nůžky' and tip_stroje == 'papír':
         print('Vyhrál jsi.')
      
-
 def tip_stroje():
     return choice(seznam_moznosti)
-
-
+    
 main()
