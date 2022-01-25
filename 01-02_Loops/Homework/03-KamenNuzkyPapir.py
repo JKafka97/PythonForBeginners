@@ -18,7 +18,9 @@ def porovnani(odpoved_uzivatele, tip_stroje):
     odpoved_uzivatele = otazka_uzivateli()
     if odpoved_uzivatele == tip_stroje:
         print('Plichta, ještě jednou.')
-    elif odpoved_uzivatele == 'kámen' and tip_stroje == 'papír' or odpoved_uzivatele == 'papír' and tip_stroje == 'nůžky' or odpoved_uzivatele== 'nůžky' and tip_stroje == 'kámen':
+    elif ((odpoved_uzivatele == 'kámen' and tip_stroje == 'papír') or 
+          (odpoved_uzivatele == 'papír' and tip_stroje == 'nůžky') or 
+          (odpoved_uzivatele == 'nůžky' and tip_stroje == 'kámen')):
         print('Prohrál jsi.')
     elif odpoved_uzivatele == 'kámen' and tip_stroje == 'nůžky'or odpoved_uzivatele == 'papír' and tip_stroje == 'kámen' or odpoved_uzivatele == 'nůžky' and tip_stroje == 'papír':
         print('Vyhrál jsi.')
