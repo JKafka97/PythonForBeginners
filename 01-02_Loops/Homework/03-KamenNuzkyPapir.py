@@ -18,13 +18,16 @@ def porovnani(odpoved_uzivatele, tip_stroje):
     print(tip_stroje)
     if odpoved_uzivatele == tip_stroje:
         print('Plichta, pojď ještě jednou frajere.')
+        
     elif ((odpoved_uzivatele == 'kámen' and tip_stroje == 'papír') or 
           (odpoved_uzivatele == 'papír' and tip_stroje == 'nůžky') or 
           (odpoved_uzivatele == 'nůžky' and tip_stroje == 'kámen')):
         print('Prohrál jsi.')
-    elif odpoved_uzivatele == 'kámen' and tip_stroje == 'nůžky'or odpoved_uzivatele == 'papír' and tip_stroje == 'kámen' or odpoved_uzivatele == 'nůžky' and tip_stroje == 'papír':
+    elif ((odpoved_uzivatele == 'kámen' and tip_stroje == 'nůžky') or
+          (odpoved_uzivatele == 'papír' and tip_stroje == 'kámen') or 
+          (odpoved_uzivatele == 'nůžky' and tip_stroje == 'papír')):
         print('Vyhrál jsi.')
-     
+
 def tip_stroje():
     return choice(seznam_moznosti)
     
