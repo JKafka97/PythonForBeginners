@@ -33,7 +33,7 @@ def vypocet():
             uzivatel = uzivatel + cislo_uzivatel()
             kasino = kasino + cislo_kasino()
             if kasino == 21:
-                print('Prohrál jsi')
+                print('Krupiré má 21 bodů. Prohrál jsi. Vyhrává kasino.')
                 break
         elif dalsi_karta == 'ne':
             break
