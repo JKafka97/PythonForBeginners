@@ -17,8 +17,8 @@ def main():
         if dalsi_karta == 'ano':
             print("Máš", uzivatel, "bodů.")
             print("Krupiér má", kasino, "bodů")
-            uzivatel = uzivatel + cislo_uzivatel()
-            kasino = kasino + cislo_kasino()
+            uzivatel += cislo_uzivatel()
+            kasino += cislo_kasino()
             if kasino == 21:
                 print('Krupiré má 21 bodů. Prohrál jsi. Vyhrává kasino.')
                 break
