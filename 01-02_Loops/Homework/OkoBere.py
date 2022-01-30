@@ -24,7 +24,7 @@ def vypocet():
     kasino = cislo_kasino()
     uzivatel = cislo_uzivatel()
     while uzivatel < 21:
-        dalsi_karta = input('Chceš otočit kartu? ')
+        dalsi_karta = input('Chceš otočit kartu ano/ne? ')
         if dalsi_karta == 'ano':
             print("Máš", uzivatel, "bodů.")
             print("Krupiér má", kasino, "bodů")
