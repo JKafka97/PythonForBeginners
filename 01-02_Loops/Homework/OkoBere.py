@@ -10,15 +10,15 @@
 from random import randrange
 
 def main():
-    kasino = cislo_kasino()
-    uzivatel = cislo_uzivatel()
+    kasino = 0
+    uzivatel = 0
     while uzivatel < 21:
         dalsi_karta = input('Chceš otočit kartu ano/ne? ')
         if dalsi_karta == 'ano':
-            print("Máš", uzivatel, "bodů.")
-            print("Krupiér má", kasino, "bodů")
             uzivatel += cislo_uzivatel()
             kasino += cislo_kasino()
+            print("Máš", uzivatel, "bodů.")
+            print("Krupiér má", kasino, "bodů")
             if kasino == 21:
                 print('Krupiré má 21 bodů. Prohrál jsi. Vyhrává kasino.')
                 break
