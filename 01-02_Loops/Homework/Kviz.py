@@ -2,4 +2,9 @@
 #pomocí random.shuffle vyber postupně všechny otázky
 #napočítej kolik jich bylo dobře odpovězeno a kolik ne
 
-#(for + dic + while)
+#(for + dic + while)    zamyslet se co dělá for cyklus, stejně jako je v Diva
+
+
+from random import shuffle
+
+hra = {""}    # stejně jako je v indexu 
