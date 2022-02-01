@@ -2,4 +2,3 @@
 
 #(datové typy, vstup uživatele)
 
-
