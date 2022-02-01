@@ -4,7 +4,3 @@
 
 #(for + dic + while)    zamyslet se co dělá for cyklus, stejně jako je v Diva
 
-
-from random import shuffle
-
-hra = {""}    # stejně jako je v indexu 
