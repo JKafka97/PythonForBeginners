@@ -4,7 +4,6 @@
 
 #(for + dic + while)    zamyslet se co dělá for cyklus, stejně jako je v Diva
 
-
 from random import shuffle
 
 print('Vítej v kvízu o seriálu Simpsons')
@@ -17,6 +16,7 @@ dobre = 0
 spatne = 0
 
 def main(dobre, spatne):
+    shuffle(list(hra.keys()))
     for otazka in hra.keys():
         odpoved_uzivatele = otazka_na_uzivatele(otazka)
         if odpoved_uzivatele == hra[otazka]:
