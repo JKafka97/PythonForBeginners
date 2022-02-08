@@ -14,17 +14,26 @@ dobytek = {"kráva" : 0, "býk" : 0}
 
 def main():
     hodnota_pc = cislo_pc()
-    # # print(hodnota_pc)
-    # for i in hodnota_pc:
+    while True:
+        odhad = typni_si()
+        if hodnota_pc == odhad:
+            print("Vyhrál jsi.")
+        else:
+            for i in odhad:
+                if hodnota_pc[i] == hodnota_pc[i]:
+                    dobytek["kráva"]+=1
         
+                print("Máš", dobytek["kráva"], "krav a", dobytek["býk"], "býků")    #vypíše se hláška na sečtení dobytka
+            if dobytek["býk"] == 4:             #ukončí cyklus, jestě musím vymyslet jestli While nebo for
+                break
 
 
 def typni_si():
-    return int(input("Jaký je tvůj typ? "))
+    return str(input("Jaký je tvůj typ? "))
 
 
 def cislo_pc():
-    return randrange(1000, 9999)
+    return str(randrange(1000, 9999))
 
 
 
