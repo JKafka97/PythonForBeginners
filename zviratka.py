@@ -8,24 +8,28 @@
 from random import randrange
 
 print('''Vítej u zábavné a všemi oblíbené hry KRAVY A BÝCI!
-    Tvým úkolem bude uhádnout čtyř místné číslo, které vygeneruje počítač. ''')
+Tvým úkolem bude uhádnout čtyř místné číslo, které vygeneruje počítač. ''')
 
 dobytek = {"kráva" : 0, "býk" : 0}
 
 def main():
     hodnota_pc = cislo_pc()
-    while True:
+    while dobytek["býk"] != 4:
         odhad = typni_si()
         if hodnota_pc == odhad:
             print("Vyhrál jsi.")
+            break
         else:
-            for i in odhad:
-                if hodnota_pc[i] == hodnota_pc[i]:
+            for i in range(0,4):
+                if hodnota_pc[i] == odhad[i]:
                     dobytek["kráva"]+=1
-        
+            for i in hodnota_pc:
+                if i in odhad:
+                    dobytek["býk"]+=1
+    
                 print("Máš", dobytek["kráva"], "krav a", dobytek["býk"], "býků")    #vypíše se hláška na sečtení dobytka
-            if dobytek["býk"] == 4:             #ukončí cyklus, jestě musím vymyslet jestli While nebo for
-                break
+                if dobytek["býk"] == 4:             #ukončí cyklus, jestě musím vymyslet jestli While nebo for
+                    print('Vyhrál jsi.')
 
 
 def typni_si():
@@ -33,7 +37,7 @@ def typni_si():
 
 
 def cislo_pc():
-    return str(randrange(1000, 9999))
+    return str((randrange(1000, 9999)))
 
 
 
