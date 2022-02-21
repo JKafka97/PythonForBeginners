@@ -5,7 +5,7 @@
 # vysledek(parametr) jsou 4 býci
 # random.cislo   , proměné (krávy a bíci) budou slovník,   while(4býci),  for na projití všech číslovek,  indexování(+=1)    
 
-from random import randrange
+from random import random, randint    
 
 print('''Vítej u zábavné a všemi oblíbené hry KRAVY A BÝCI!
 Tvým úkolem bude uhádnout čtyř místné číslo, které vygeneruje počítač. ''')
@@ -20,28 +20,36 @@ def main():
             print("Vyhrál jsi.")
             break
         else:
-            for i in range(0,4):
-                if hodnota_pc[i] == odhad[i]:
-                    dobytek["kráva"]+=1
-            for i in hodnota_pc:
-                if i in odhad:
+            i = 0
+            for jednotlivy_clen in odhad:
+                if jednotlivy_clen == hodnota_pc[i]:
                     dobytek["býk"]+=1
-    
-                print("Máš", dobytek["kráva"], "krav a", dobytek["býk"], "býků")    #vypíše se hláška na sečtení dobytka
-                if dobytek["býk"] == 4:             #ukončí cyklus, jestě musím vymyslet jestli While nebo for
-                    print('Vyhrál jsi.')
-
+                elif jednotlivy_clen in hodnota_pc:
+                    dobytek["kráva"]+=1
+                i +=1
+            print("Máš", dobytek["kráva"], "krav a", dobytek["býk"], "býků")
 
 def typni_si():
-    return str(input("Jaký je tvůj typ? "))
-
-
+    cislo_uzivatel = ""
+    while len(cislo_uzivatel) < 4:
+        cislo = input("Jaký je tvůj typ? Zadávej jednociferná čísla: ")
+        if len(cislo) > 1:
+            print("Seš dement")
+        else:
+            if cislo in cislo_uzivatel:
+                print('Fuck you! Zadej jiné číslo')
+            elif cislo not in cislo_uzivatel:
+                cislo_uzivatel += cislo
+    return cislo_uzivatel
+        
 def cislo_pc():
-    return str((randrange(1000, 9999)))
-
-
-
-
+    cislo_pc = set()
+    while len(cislo_pc) < 4:
+        cislo_pc.add(randint(0,9))
+    cislo_str = ""
+    for jednotliva_cisla in cislo_pc:
+        cislo_str += str(jednotliva_cisla)
+    return cislo_str
 
 main()
 
