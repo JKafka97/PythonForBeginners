@@ -3,19 +3,30 @@
 # funkční login (3 uživatele)
 #
 
-slovnik = {"velká" : 0, "malá" : 0, "čísla" : 0, "čárky" : 0}
+slovnik = {"velká" : 0, "malá" : 0, "čísla" : 0, "čárky" : 0, "tečka" : 0, "vykřičník" : 0}
 
 
 def main():
     text = otazka()
     for i in text:
-        if i == 'A' or i == 'B':
+        if i.isupper():
             slovnik["velká"]+=1
-    print('Tvůj text obsahuje: Velká písmena:', slovnik["velká"])
+        elif i.islower():
+            slovnik["malá"]+=1
+        elif i == ",":
+            slovnik["čárky"]+=1
+        elif i == ".":
+            slovnik["tečka"]+=1
+        elif i == "!":
+            slovnik["vykřičník"]+=1
+
+    print("Tvůj text obsahuje: \nVelká písmena:", slovnik["velká"], "\nMalá písmena: ", slovnik["malá"], "\nČárky: ", slovnik["čárky"], "\nTečky: ", slovnik["tečka"], "Vykřičníky: ", slovnik["vykřičník"])
+ 
 
 
 def otazka():
-    return input('Vložte svůj text: ')
+    return input("Vložte svůj text: ")
 
 
 main()
+
