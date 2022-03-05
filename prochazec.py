@@ -13,6 +13,8 @@ def main():
             slovnik["velká"]+=1
         elif i.islower():
             slovnik["malá"]+=1
+        elif i.isnumeric():
+            slovnik["čísla"]+=1
         elif i == ",":
             slovnik["čárky"]+=1
         elif i == ".":
@@ -20,7 +22,7 @@ def main():
         elif i == "!":
             slovnik["vykřičník"]+=1
 
-    print("Tvůj text obsahuje: \nVelká písmena:", slovnik["velká"], "\nMalá písmena: ", slovnik["malá"], "\nČárky: ", slovnik["čárky"], "\nTečky: ", slovnik["tečka"], "Vykřičníky: ", slovnik["vykřičník"])
+    print("Tvůj text obsahuje: \nVelká písmena:", slovnik["velká"], "\nMalá písmena: ", slovnik["malá"], "\nČísla: ", slovnik["čísla"], "\nČárky: ", slovnik["čárky"], "\nTečky: ", slovnik["tečka"], "\nVykřičníky: ", slovnik["vykřičník"])
  
 
 
