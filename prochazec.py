@@ -20,7 +20,7 @@ def main():
         elif i == "!":
             slovnik["vykřičník"]+=1
 
-    print("Tvůj text obsahuje: \nVelká písmena:", slovnik["velká"], "\nMalá písmena: ", slovnik["malá"], "\nČísla: ", slovnik["čísla"], "\nČárky: ", slovnik["čárky"], "\nTečky: ", slovnik["tečka"], "\nVykřičníky: ", slovnik["vykřičník"])
+    print("Tvůj text obsahuje: \nVelká písmena: {velka} \nMalá písmena: {mala} \nČísla: {cisla} \nČárky: {carka} \nTečky: {tecka} \nVykřičníky: {vykricnik}".format (velka = slovnik["velká"], mala = slovnik["malá"], cisla = slovnik["čísla"], carka = slovnik["čárky"], tecka = slovnik["tečka"], vykricnik = slovnik["vykřičník"]))
  
 def otazka():
     return input("Vložte svůj text: ")
