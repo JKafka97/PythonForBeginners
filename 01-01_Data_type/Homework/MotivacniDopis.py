@@ -3,7 +3,7 @@ pozice = "Kvalita provozu"
 skola = "Univerzity Kralovy"
 vlastnosti = "spolehlivý, pečlivý, pracovitý a dochvělný"
 jmeno = "Mgr. Jan Kafka"
-a = """Vážená paní, vážený pane, 
+dopis = """Vážená paní, vážený pane, 
 
 velice mě zaujala vámi nabízená pozice {0}, na stránce www.jobs.cz.
 Rád bych se připojili k vašemu týmu. 
@@ -22,4 +22,4 @@ možnosti které mi Vaše firma nabízí.
 S pozdravem
 
 {3} """.format(pozice, skola, vlastnosti, jmeno)
-print(a)
+print(dopis)
