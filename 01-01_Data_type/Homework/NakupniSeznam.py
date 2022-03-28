@@ -2,9 +2,6 @@
 
 #(if a metody)
 
-
-
-
 def main():
     vkus = otazka_vkus()
     maso = otazka_maso()
@@ -25,26 +22,13 @@ def otazka_vkus():
     return input("Jaký máš vkus? ")
     
 def recept(vkus, maso, paprika, rajce):
-    if maso=="ano" and paprika=="ano" and rajce=="ne" and vkus=="tak napůl":
+    if maso=="ano" and paprika=="ano" and vkus=="tak napůl":
         print("Udělej topinec! ")
-    elif maso=="ano" and rajce=="ano" and paprika=="ne" and vkus=="dobrý":
-        print("Bloňka jen pro tebe!")
-    elif maso=="ne" and paprika=="ano" and rajce=="ano" and vkus=="žádný":
+    elif maso=="ano" and rajce=="ano" and vkus=="dobrý":
+        print("Boloňka jen pro tebe!")
+    elif paprika=="ano" and rajce=="ano" and vkus=="žádný":
         print("Je mi tě líto, ale musíš si dát lečo :( ")
-    elif maso=="ne" and rajce=="ne" and paprika=="ne" and vkus=="žádný" or vkus=="tak napůl" or vkus=="dobrý":
+    else:
         print("Tak tady ani bůh nepomůže")
-    elif maso=="ano" and rajce=="ne" and paprika=="ne" and vkus=="žádný" or vkus=="tak napůl" or vkus=="dobrý":
-        print("Tak tady ani bůh nepomůže")
-    elif maso=="ne" and rajce=="ano" and paprika=="ne" and vkus=="žádný" or vkus=="tak napůl" or vkus=="dobrý":
-        print("Tak tady ani bůh nepomůže")
-    elif maso=="ne" and rajce=="ne" and paprika=="ano" and vkus=="žádný" or vkus=="tak napůl" or vkus=="dobrý":
-        print("Tak tady ani bůh nepomůže")
-    elif maso=="ano" and rajce=="ano" and paprika=="ano" and vkus=="dobrý":
-        print("Doporučuji Boloňku")
-    elif maso=="ano" and rajce=="ano" and paprika=="ano" and vkus=="tak napůl":
-        print("Udělej si topinec!")
-    elif maso=="ano" and rajce=="ano" and paprika=="ano" and vkus=="žádný":
-        print("Udělej si lečo ty barbare bez vkusu")
-    
-
+        
 main()
