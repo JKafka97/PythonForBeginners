@@ -30,3 +30,20 @@ elif 1+1==2:
 else:
     a = 7
 print(a)
+
+i = 0
+while i<5:
+    i=i+1
+    i+=1
+    i-=1
+    print(i)
+
+ # from random import randint
+
+# from random import * #* je pro veschno
+
+import random 
+
+randint()
+
+random.randint()
