@@ -6,3 +6,6 @@
 # když víc => vypíšu o kolik a že prohrál
 
 #(while + random)
+
+
+from random import randint
